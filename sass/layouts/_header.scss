@@ -1,0 +1,46 @@
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+
+.header__contact {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__contact-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header__contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include fonts(500, 14px, 1.14, 0.02em);
+
+    color: var(--second-color);
+
+    transition: color var(--transition-time) var(--cubic-func);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.header__contact-icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+}
