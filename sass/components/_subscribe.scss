@@ -1,7 +1,7 @@
 .footer__email {
     margin-left: auto;
 
-    width: 570px;
+    width: 100%;
 }
 
 .footer__email-title {
@@ -14,15 +14,19 @@
 }
 
 .footer__email-wrap {
-    display: flex;
+    @include desktop {
+        display: flex;
+    }
 }
 
 .footer__email-input {
     display: block;
-    margin-right: 12px;
+    margin: 0 auto;
     padding-left: 16px;
+    margin-bottom: 20px;
 
     width: 100%;
+    max-width: 450px;
     height: 50px;
 
     transition: border-color var(--transition-time) var(--cubic-func);
@@ -37,10 +41,16 @@
     &:focus {
         border-color: var(--accent-color);
     }
+
+    @include desktop {
+        margin-right: 12px;
+    }
 }
 
 .footer__button-box {
     position: relative;
+    width: 200px;
+    margin: 0 auto;
 }
 
 .footer__email-icon {

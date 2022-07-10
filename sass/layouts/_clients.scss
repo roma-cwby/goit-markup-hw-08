@@ -3,17 +3,29 @@
 }
 .clients__list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--space) / 2);
 }
 
 .client__item {
-    --item: 6;
+    --item: 2;
+    @include tablet {
+        --item: 3;
+    }
+    @include desktop {
+        --item: 6;
+    }
 }
 
 .client__item {
-    min-width: 170px;
+    max-width: 210px;
     height: 92px;
+    @include tablet {
+        max-width: 226px;
+    }
+    @include desktop {
+        max-width: 170px;
+    }
 }
 
 .client__link {

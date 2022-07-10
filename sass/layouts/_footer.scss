@@ -2,11 +2,32 @@
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .footer__container {
-    display: flex;
-    align-items: baseline;
+    @include desktop {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer__tablet-wrap {
+    @include tablet {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer__nav {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 61px;
+    }
+    @include desktop {
+        margin-right: 70px;
+    }
 }
 
 .address {
@@ -19,8 +40,10 @@
 }
 
 .footer__list {
+    margin: 0 auto;
     margin-top: 9px;
-    width: 231px;
+    width: 232px;
+    margin-bottom: 60px;
 }
 
 .footer__item:not(:first-child) {

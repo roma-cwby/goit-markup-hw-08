@@ -37,7 +37,15 @@
 
 
 .footer__soc {
-    margin-left: 70px;
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 0;
+        margin-left: 165px;
+    }
+    @include desktop {
+        margin-left: 0;
+        margin-right: 93px;
+    }
 }
 
 .footer__soc-title {

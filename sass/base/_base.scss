@@ -6,10 +6,17 @@ body {
 }
 
 .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 
-    @include fonts(700, 36px, 1.16);
+    @include fonts (700, 28px, 1.17);
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        @include fonts(700, 36px, 1.16);
+    }
 
     color: var(--main-color);
 }

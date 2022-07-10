@@ -1,15 +1,23 @@
 .benefits {
-    padding-top: 94px;
-    padding-bottom: 47px;
+    // padding-top: 94px;
+    // padding-bottom: 47px;
+    padding: 60px 0;
 }
 
 .behefits__list {
     display: flex;
+    flex-wrap: wrap;
     margin: calc(-1 * var(--space) / 2);
 }
 
 .benefits__item {
-    --item: 4;
+    --item: 1;
+    @include tablet {
+        --item: 2;
+    }
+    @include desktop {
+        --item: 4;
+    }
 }
 
 .benefits__wrapper {
@@ -31,6 +39,10 @@
     @include fonts(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
 
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+
     color: var(--main-color);
 }
 
@@ -38,5 +50,6 @@
     @include fonts(none, 14px, 1.71, 0.03em);
 
     color: var(--second-color);
-    width: 270px;
+    width: 100%;
+    // width: 270px;
 }
