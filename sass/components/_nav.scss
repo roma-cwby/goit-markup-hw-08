@@ -1,11 +1,20 @@
 .nav {
-    display: flex;
-    align-items: center;
+    display: none;
+    @include tablet {
+        display: block;
+        align-items: center;
+    }
 }
 
 .nav__list {
     display: flex;
     margin-left: auto;
+    @include tablet {
+        margin-left: 88px;
+    }
+    @include desktop {
+        margin-left: 93px;
+    }
 }
 
 .nav__item:not(:last-child) {

@@ -1,8 +1,10 @@
 .logo {
     font-family: 'Raleway';
+    @include fonts(700, 24px, 1.17, 0.03em);
 
-    @include fonts(700, 26px, 1.19, 0.02em);
-
+    @include tablet {
+        @include fonts(700, 26px, 1.17, 0.03em);
+    }
     color: var(--accent-color);
 }
 

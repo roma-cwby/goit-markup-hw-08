@@ -13,6 +13,16 @@
     margin: calc(-1 * var(--space) / 2);
 }
 
+.portfolio__item {
+    --item: 1;
+    @include tablet {
+        --item: 2;
+    }
+    @include desktop {
+        --item: 3;
+    }
+}
+
 .portfolio__link {
     transition: box-shadow var(--transition-time) var(--cubic-func);
 
@@ -64,7 +74,10 @@
 }
 
 .portfolio__title {
-    @include fonts(700, 18px, 2, 0.06em);
+    @include fonts(700, 18px, 2, 0.04em);
+    @include desktop {
+        letter-spacing: 0.06em;
+    }
 
     color: var(--main-color);
 }

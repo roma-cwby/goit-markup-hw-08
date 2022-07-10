@@ -1,7 +1,15 @@
 .portfolio__buttons {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+
+    @include tablet {
+        justify-content: center;
+    }
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
 
 .portfolio__button {
@@ -27,6 +35,11 @@
     }
 }
 
+.portfolio__button-item{
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+}
 
 .portfolio__button-item:not(:last-child) {
     margin-right: 8px;

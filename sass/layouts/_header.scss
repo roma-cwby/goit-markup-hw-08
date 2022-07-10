@@ -1,33 +1,45 @@
 .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include tablet {
+        padding: 0;
+    }
     border-bottom: 1px solid #ececec;
 }
 
 .header__container {
     display: flex;
     align-items: center;
-}
-
-.header__logo {
-    margin-right: 93px;
+    justify-content: space-between;
 }
 
 .header__contact {
-    display: flex;
-    margin-left: auto;
+    display: none;
+    @include tablet {
+        display: block;
+        margin-left: auto;
+    }
+    @include desktop {
+        display: flex;
+    }
 }
 
 .header__contact-item:not(:last-child) {
-    margin-right: 50px;
+    @include tablet {
+        margin: 0;
+    }
+    @include desktop {
+        margin-right: 30px;
+    }
 }
+
 
 .header__contact-link {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
 
-    @include fonts(500, 14px, 1.14, 0.02em);
+    @include fonts(500, 12px, 1.17, 0.02em);
 
     color: var(--second-color);
 
@@ -37,10 +49,53 @@
     &:focus {
         color: var(--accent-color);
     }
+
+    @include tablet {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    @include desktop {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include fonts(500, 14px, 1.14, 0.02em);
+    }
 }
 
 .header__contact-icon {
     margin-right: 10px;
 
+    fill: currentColor;
+}
+
+.mob {
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
+}
+
+.mob__btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    color: var(--main-color);
+    border: none;
+    background-color: transparent;
+    transition: color var(--transition-time) var(--cubic-func);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.mob__icon {
+    position: absolute;
     fill: currentColor;
 }
