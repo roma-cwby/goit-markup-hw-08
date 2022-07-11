@@ -57,9 +57,12 @@
     height: 100%;
     width: 100%;
 
-    @include fonts(none, 18px, 1.56, 0.03em);
+    @include fonts(none, 15px, 1.56, 0.03em);
+    @media screen and (min-width: 380px) {
+        font-size: 18px;
+    }
 
-    transform: translateY(101%);
+    transform: translateY(105%);
     transition: transform var(--transition-time) var(--cubic-func);
 
     color: var(--white-color);
@@ -87,9 +90,6 @@
 
 .portfolio__title {
     @include fonts(700, 18px, 2, 0.06em);
-    // @include desktop {
-    //     letter-spacing: 0.06em;
-    // }
 
     color: var(--main-color);
 }

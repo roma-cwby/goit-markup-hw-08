@@ -169,14 +169,21 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work__list list">
             <li class="work__item net">
-              <img src="./images/studio/development.jpg" alt="Разработка" width="370" height="294" />
+              <img
+                srcset="./images/studio/development.jpg 1x, ./images/studio/development-2x.jpg 2x"
+                src="./images/studio/development.jpg"
+                alt="Разработка"
+                width="370"
+                height="294"
+              />
               <div class="work__wrapper">
                 <h3 class="work__description">Десктопные приложения</h3>
               </div>
             </li>
             <li class="work__item net">
               <img
-                src="./images/studio/ui-design.jpg"
+                srcset="./images/studio/mobile.jpg 1x, ./images/studio/mobile-2x.jpg 2x"
+                src="./images/studio/mobile.jpg"
                 alt="Дизайн пользовательского интерфейса"
                 width="370"
                 height="294"
@@ -186,7 +193,13 @@
               </div>
             </li>
             <li class="work__item net">
-              <img src="./images/studio/design.jpg" alt="Дизайн" width="370" height="294" />
+              <img
+                srcset="./images/studio/design.jpg 1x, ./images/studio/desing-2x.jpg 2x"
+                src="./images/studio/design.jpg"
+                alt="Дизайн"
+                width="370"
+                height="294"
+              />
               <div class="work__wrapper">
                 <h3 class="work__description">Дизайнерские решения</h3>
               </div>
@@ -200,13 +213,21 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item net">
-              <img
-                class="img"
-                src="./images/studio/product-designer.jpg"
-                alt="Дизайнер подукта"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/studio/product-designer.jpg 1x, ./images/studio/product-designer-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/studio/product-designer-tab.jpg 1x, ./images/studio/product-designer-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/studio/product-designer-mob.jpg 1x, ./images/studio/product-designer-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img class="img" src="./images/studio/product-designer.jpg" alt="Дизайнер подукта" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -243,13 +264,27 @@
               </div>
             </li>
             <li class="team__item net">
-              <img
-                class="img"
-                src="./images/studio/frontend-developer.jpg"
-                alt="Фронтенд разработчик"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/studio/frontend-developer.jpg 1x, ./images/studio/frontend-developer-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/frontend-developer-tab.jpg    1x,
+                    ./images/studio/frontend-developer-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/frontend-developer-mob.jpg    1x,
+                    ./images/studio/frontend-developer-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img class="img" src="./images/studio/frontend-developer.jpg" alt="Фронтенд разработчица" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -286,7 +321,21 @@
               </div>
             </li>
             <li class="team__item net">
-              <img class="img" src="./images/studio/marketer.jpg" alt="Маркетолог" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/studio/marketer.jpg 1x, ./images/studio/marketer-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/studio/marketer-tab.jpg 1x, ./images/studio/marketer-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/studio/marketer-mob.jpg 1x, ./images/studio/marketer-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img class="img" src="./images/studio/marketer.jpg" alt="Маркетолог" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -323,13 +372,21 @@
               </div>
             </li>
             <li class="team__item net">
-              <img
-                class="img"
-                src="./images/studio/ui-designer.jpg"
-                alt="Дизайнер пользовательского интерфейса"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/studio/ui-designer.jpg 1x, ./images/studio/ui-designer-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/studio/ui-designer-tab.jpg 1x, ./images/studio/ui-designer-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/studio/ui-designer-mob.jpg 1x, ./images/studio/ui-designer-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img class="img" src="./images/studio/ui-designer.jpg" alt="Дизайнер пользовательского интерфейса" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>

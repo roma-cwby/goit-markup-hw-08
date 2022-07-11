@@ -115,6 +115,10 @@
     background-color: var(--white-color);
 }
 
+.animation {
+    animation: menu-ani 250ms ease-out;
+}
+
 .mob__close-btn {
     position: absolute;
     top: 10px;
@@ -163,8 +167,11 @@
 
 .mob-menu__contact-phone {
     margin-bottom: 32px;
-    @include fonts(500, 34px, 1.17, 0.02em);
+    @include fonts(500, 27px, 1.17, 0.02em);
     color: var(--accent-color);
+    @include mobile {
+        font-size: 34px;
+    }
 }
 
 .mob-menu__contact-mail{
@@ -195,4 +202,15 @@
     @include fonts(500, 18px, 1.22, 0.02em);
 
     color: var(--accent-color);
+}
+
+@keyframes menu-ani {
+    0%{
+        // transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        // transform: translateY(0);
+        opacity: 1;
+    }
 }
