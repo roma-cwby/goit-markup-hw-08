@@ -1,101 +1,100 @@
-.portfolio{
-    @extend %section;
+.portfolio {
+  @extend %section;
 }
 
 .portfolio__current {
-    background-color: var(--accent-color);
-    color: var(--white-color);
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 
 .portfolio__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: calc(-1 * var(--space) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--space) / 2);
 }
 
 .portfolio__item {
-    --item: 1;
-    @include tablet {
-        --item: 2;
-    }
-    @include desktop {
-        --item: 3;
-    }
+  --item: 1;
+  @include tablet {
+    --item: 2;
+  }
+  @include desktop {
+    --item: 3;
+  }
 
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
-        &:first-child .portfolio__info {
-            padding-bottom: 56px;
-        }  
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    &:first-child .portfolio__info {
+      padding-bottom: 56px;
     }
+  }
 }
 
 .portfolio__link {
-    transition: box-shadow var(--transition-time) var(--cubic-func);
+  transition: box-shadow var(--transition-time) var(--cubic-func);
 
-    &:hover,
-    &:focus {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
-
 .portfolio__project-box {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio__project-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 
-    padding-left: 24px;
+  padding-left: 24px;
 
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 
-    @include fonts(none, 15px, 1.56, 0.03em);
-    @media screen and (min-width: 380px) {
-        font-size: 18px;
-    }
+  @include fonts(none, 15px, 1.56, 0.03em);
+  @media screen and (min-width: 380px) {
+    font-size: 18px;
+  }
 
-    transform: translateY(105%);
-    transition: transform var(--transition-time) var(--cubic-func);
+  transform: translateY(105%);
+  transition: transform var(--transition-time) var(--cubic-func);
 
-    color: var(--white-color);
-    background-color: rgba(33, 150, 243, 0.9);
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
 
-    .portfolio__link:hover &,
-    .portfolio__link:focus & {
-        transform: translateY(0);
-    }
+  .portfolio__link:hover &,
+  .portfolio__link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .portfolio__info {
-    padding: 20px 24px;
+  padding: 20px 24px;
 
-    border-bottom: 1px solid #ececec;
-    border-left: 1px solid #ececec;
-    border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
 
-    @include tablet {
-        &:first-child {
-            padding-bottom: 54px;
-        }
+  @include tablet {
+    &:first-child {
+      padding-bottom: 54px;
     }
+  }
 }
 
 .portfolio__title {
-    @include fonts(700, 18px, 2, 0.06em);
+  @include fonts(700, 18px, 2, 0.06em);
 
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 .portfolio__text {
-    @include fonts(none, 16px, 1.87, 0.03em);
+  @include fonts(none, 16px, 1.87, 0.03em);
 
-    color: var(--second-color);
+  color: var(--second-color);
 }

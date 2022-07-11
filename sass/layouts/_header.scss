@@ -1,216 +1,215 @@
 .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-    @include tablet {
-        padding: 0;
-    }
-    border-bottom: 1px solid #ececec;
+  @include tablet {
+    padding: 0;
+  }
+  border-bottom: 1px solid #ececec;
 }
 
 .header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__contact {
-    display: none;
-    @include tablet {
-        display: block;
-        margin-left: auto;
-    }
-    @include desktop {
-        display: flex;
-    }
+  display: none;
+  @include tablet {
+    display: block;
+    margin-left: auto;
+  }
+  @include desktop {
+    display: flex;
+  }
 }
 
 .header__contact-item:not(:last-child) {
-    @include tablet {
-        margin: 0;
-    }
-    @include desktop {
-        margin-right: 30px;
-    }
+  @include tablet {
+    margin: 0;
+  }
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
-
 .header__contact-link {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    @include fonts(500, 12px, 1.17, 0.02em);
+  @include fonts(500, 12px, 1.17, 0.02em);
 
-    color: var(--second-color);
+  color: var(--second-color);
 
-    transition: color var(--transition-time) var(--cubic-func);
+  transition: color var(--transition-time) var(--cubic-func);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 
-    @include tablet {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    @include desktop {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        @include fonts(500, 14px, 1.14, 0.02em);
-    }
+  @include tablet {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  @include desktop {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include fonts(500, 14px, 1.14, 0.02em);
+  }
 }
 
 .header__contact-icon {
-    margin-right: 10px;
+  margin-right: 10px;
 
-    fill: currentColor;
+  fill: currentColor;
 }
 
-.mob__open-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.mob__open-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 
-    padding: 0;
+  padding: 0;
 
-    color: var(--main-color);
-    border: none;
-    background-color: transparent;
-    transition: color var(--transition-time) var(--cubic-func);
+  color: var(--main-color);
+  border: none;
+  background-color: transparent;
+  transition: color var(--transition-time) var(--cubic-func);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 
-    @media screen and (min-width: 767px) {
-        display: none;
-    }
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
 }
 
 .mob__icon {
-    fill: currentColor;
+  fill: currentColor;
 }
 
 .mob-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
 
-    padding: 48px 40px;
+  padding: 48px 40px;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    background-color: var(--white-color);
+  background-color: var(--white-color);
 }
 
 .animation {
-    animation: menu-ani 250ms ease-out;
+  animation: menu-ani 250ms ease-out;
 }
 
 .mob__close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 
-    transition: color var(--transition-time) var(--cubic-func);
+  transition: color var(--transition-time) var(--cubic-func);
 
-    color: var(--main-color);
-    border: none;
-    background-color: transparent;
+  color: var(--main-color);
+  border: none;
+  background-color: transparent;
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .mob__close-icon {
-    fill: currentColor;
+  fill: currentColor;
 }
 
 .mob-menu__item:not(:last-child) {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .mob-menu__list {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .mob-menu__link {
-    @include fonts(500, 40px, 1.17, 0.02em);
-    color: var(--main-color);
+  @include fonts(500, 40px, 1.17, 0.02em);
+  color: var(--main-color);
 }
 
 .mob__link--current {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .mob-menu__contact-phone {
-    margin-bottom: 32px;
-    @include fonts(500, 27px, 1.17, 0.02em);
-    color: var(--accent-color);
-    @include mobile {
-        font-size: 34px;
-    }
+  margin-bottom: 32px;
+  @include fonts(500, 27px, 1.17, 0.02em);
+  color: var(--accent-color);
+  @include mobile {
+    font-size: 34px;
+  }
 }
 
-.mob-menu__contact-mail{
-    @include fonts(500, 24px, 1.17, 0.02em);
-    color: var(--second-color);
+.mob-menu__contact-mail {
+  @include fonts(500, 24px, 1.17, 0.02em);
+  color: var(--second-color);
 }
 
 .mob-menu__soc-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
 }
 
 .mob-menu__soc-item {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .mob-menu__soc-item:not(:last-child) .mob-menu__soc-link::after {
-    content: '';
-    height: 22px;
+  content: '';
+  height: 22px;
 
-    margin: 0 10px ;
+  margin: 0 10px;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mob-menu__soc-link {
-    @include fonts(500, 18px, 1.22, 0.02em);
+  @include fonts(500, 18px, 1.22, 0.02em);
 
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 @keyframes menu-ani {
-    0%{
-        // transform: translateY(-100%);
-        opacity: 0;
-    }
-    100%{
-        // transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    // transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    // transform: translateY(0);
+    opacity: 1;
+  }
 }

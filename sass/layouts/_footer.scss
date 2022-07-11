@@ -1,65 +1,65 @@
 .footer {
-    background-color: #2f303a;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    @media screen and (max-width: 1199px) {
-        text-align: center;
-    }
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer__container {
-    @include desktop {
-        display: flex;
-        align-items: baseline;
-    }
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__tablet-wrap {
-    @include tablet {
-        display: flex;
-        align-items: baseline;
-    }
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__nav {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-left: 61px;
-    }
-    @include desktop {
-        margin-right: 70px;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 61px;
+  }
+  @include desktop {
+    margin-right: 70px;
+  }
 }
 
 .address {
-    margin-top: 20px;
+  margin-top: 20px;
 
-    @include fonts(none, 14px, 1.71, none);
-    font-style: normal;
+  @include fonts(none, 14px, 1.71, none);
+  font-style: normal;
 
-    color: var(--white-color);
+  color: var(--white-color);
 }
 
 .footer__list {
-    margin: 0 auto;
-    margin-top: 9px;
-    width: 232px;
-    margin-bottom: 60px;
+  margin: 0 auto;
+  margin-top: 9px;
+  width: 232px;
+  margin-bottom: 60px;
 }
 
 .footer__item:not(:first-child) {
-    margin-top: 9px;
+  margin-top: 9px;
 }
 
 .footer__contact {
-    font-size: 14px;
-    line-height: 1.71;
+  font-size: 14px;
+  line-height: 1.71;
 
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 
-    transition: color var(--transition-time) var(--cubic-func);
+  transition: color var(--transition-time) var(--cubic-func);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }

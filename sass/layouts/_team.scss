@@ -1,49 +1,49 @@
 .team {
-    @extend %section;
-    background-color: #f5f4fa;
+  @extend %section;
+  background-color: #f5f4fa;
 }
 
 .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: calc(-1 * var(--space) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--space) / 2);
 }
 
 .team__item {
-    --item: 1;
+  --item: 1;
 
-    background-color: #ffffff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-    @include tablet {
-        --item: 2;
-    }
-    @include desktop {
-        --item: 4;
-    }
+  @include tablet {
+    --item: 2;
+  }
+  @include desktop {
+    --item: 4;
+  }
 }
 
 .team__info {
-    padding-top: 30px;
-    text-align: center;
-    padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .team__name {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    @include fonts(500, 16px, 1.19, 0.03em);
+  @include fonts(500, 16px, 1.19, 0.03em);
 
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 .team__text {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    @include fonts(none, 16px, 1.19, 0.03em);
+  @include fonts(none, 16px, 1.19, 0.03em);
 
-    color: var(--second-color);
+  color: var(--second-color);
 }
