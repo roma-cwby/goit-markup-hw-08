@@ -21,6 +21,12 @@
     @include desktop {
         --item: 3;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        &:first-child .portfolio__info {
+            padding-bottom: 56px;
+        }  
+    }
 }
 
 .portfolio__link {
@@ -71,13 +77,19 @@
     border-bottom: 1px solid #ececec;
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
+
+    @include tablet {
+        &:first-child {
+            padding-bottom: 54px;
+        }
+    }
 }
 
 .portfolio__title {
-    @include fonts(700, 18px, 2, 0.04em);
-    @include desktop {
-        letter-spacing: 0.06em;
-    }
+    @include fonts(700, 18px, 2, 0.06em);
+    // @include desktop {
+    //     letter-spacing: 0.06em;
+    // }
 
     color: var(--main-color);
 }

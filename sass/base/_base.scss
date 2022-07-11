@@ -25,3 +25,7 @@ body {
     flex-basis: calc(100% / var(--item) - var(--space));
     margin: calc(var(--space) / 2);
 }
+
+.no-scroll {
+    overflow: hidden;
+}

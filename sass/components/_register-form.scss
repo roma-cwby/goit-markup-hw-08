@@ -98,11 +98,16 @@
     display: flex;
     align-items: center;
 
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: var(--second-color);
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .modal__checkbox {
@@ -111,7 +116,6 @@
     justify-content: center;
 
     margin-right: 8px;
-    margin-left: 12px;
 
     width: 16px;
     height: 15px;
@@ -124,6 +128,10 @@
     .modal__check:checked+.modal__check-text & {
         border: none;
         background-color: var(--accent-color);
+    }
+
+    @include desktop {
+        margin-left: 12px;
     }
 }
 

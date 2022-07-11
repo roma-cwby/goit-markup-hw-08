@@ -67,14 +67,7 @@
     fill: currentColor;
 }
 
-.mob {
-    @media screen and (min-width: 767px) {
-        display: none;
-    }
-}
-
-.mob__btn{
-    position: relative;
+.mob__open-btn{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,9 +86,113 @@
     &:focus {
         color: var(--accent-color);
     }
+
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
 }
 
 .mob__icon {
-    position: absolute;
     fill: currentColor;
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+
+    padding: 48px 40px;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--white-color);
+}
+
+.mob__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    height: 40px;
+    width: 40px;
+
+    transition: color var(--transition-time) var(--cubic-func);
+
+    color: var(--main-color);
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.mob__close-icon {
+    fill: currentColor;
+}
+
+.mob-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mob-menu__list {
+    margin-bottom: 50px;
+}
+
+.mob-menu__link {
+    @include fonts(500, 40px, 1.17, 0.02em);
+    color: var(--main-color);
+}
+
+.mob__link--current {
+    color: var(--accent-color);
+}
+
+.mob-menu__contact-phone {
+    margin-bottom: 32px;
+    @include fonts(500, 34px, 1.17, 0.02em);
+    color: var(--accent-color);
+}
+
+.mob-menu__contact-mail{
+    @include fonts(500, 24px, 1.17, 0.02em);
+    color: var(--second-color);
+}
+
+.mob-menu__soc-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 64px;
+}
+
+.mob-menu__soc-item {
+    margin-bottom: 10px;
+}
+
+.mob-menu__soc-item:not(:last-child) .mob-menu__soc-link::after {
+    content: '';
+    height: 22px;
+
+    margin: 0 10px ;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-menu__soc-link {
+    @include fonts(500, 18px, 1.22, 0.02em);
+
+    color: var(--accent-color);
 }
